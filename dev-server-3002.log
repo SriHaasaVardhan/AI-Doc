@@ -1,0 +1,27 @@
+
+> ai-doc-generator@0.1.0 dev
+> next dev --port 3002
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3002
+- Network:       http://192.168.1.5:3002
+- Environments: .env.local
+✓ Ready in 767ms
+⚠ Turbopack's filesystem cache has been deleted because we previously detected an internal error in Turbopack. Builds or page loads may be slower as a result.
+
+ GET /generate?demo=true 200 in 3.1s (next.js: 2.9s, application-code: 242ms)
+ GET /generate 200 in 3.1s (next.js: 2.9s, application-code: 179ms)
+Attempting generation with provider: OpenRouter
+ POST /api/generate 200 in 13.6s (next.js: 235ms, application-code: 13.4s)
+✓ Finished writing to filesystem cache in 11.0s
+Attempting generation with provider: OpenRouter
+ POST /api/generate 200 in 11.3s (next.js: 29ms, application-code: 11.3s)
+ GET /generate 200 in 163ms (next.js: 65ms, application-code: 98ms)
+ GET / 200 in 491ms (next.js: 401ms, application-code: 90ms)
+ GET / 200 in 592ms (next.js: 476ms, application-code: 116ms)
+ GET /generate 200 in 32ms (next.js: 3ms, application-code: 30ms)
+ GET /generate 200 in 26ms (next.js: 4ms, application-code: 22ms)
+ POST /api/github 200 in 5.3s (next.js: 148ms, application-code: 5.1s)
+Attempting generation with provider: OpenRouter
+ POST /api/generate 200 in 43s (next.js: 3ms, application-code: 43s)
+ GET /results 200 in 730ms (next.js: 704ms, application-code: 25ms)
