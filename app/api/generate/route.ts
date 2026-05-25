@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
+import { createAIProviders } from "@/lib/ai/default-providers";
 import { FallbackManager } from "@/lib/ai/fallback-manager";
-import { OpenRouterProvider } from "@/lib/ai/providers/openrouter";
-import { GroqProvider } from "@/lib/ai/providers/groq";
-import { GitHubModelsProvider } from "@/lib/ai/providers/github";
 import { buildCompactSummary } from "@/lib/utils/summarizer";
 import { buildCombinedPrompt } from "@/lib/ai/prompts";
 
@@ -35,11 +33,7 @@ export async function POST(req: Request) {
         let combinedContent = "";
         
         try {
-          const fallbackManager = new FallbackManager([
-            new OpenRouterProvider(),
-            new GroqProvider(),
-            new GitHubModelsProvider(),
-          ]);
+          const fallbackManager = new FallbackManager(createAIProviders());
           const result = await fallbackManager.generate(user, system);
           combinedContent = result.content;
           activeProvider = result.provider;
